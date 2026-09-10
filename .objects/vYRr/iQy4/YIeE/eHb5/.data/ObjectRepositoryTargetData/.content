@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="ytp1UIX9b0iMoWKvRzg-aQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="mu.accsofterp.com/AccSoft_MU/studentLogin.aspx" DesignTimeRectangle="986, 689, 200, 44" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='Login*' /&gt;" Guid="c26f268e-82db-47cf-8fe8-134d1eee21d3" ScopeSelectorArgument="&lt;html app='msedge.exe' title='AccSoft 2.0' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="6219008bcae36977e4f7c035f221a044.jpg" xmlns="">0I5nV5CBEEE-OpGOVEE20RA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

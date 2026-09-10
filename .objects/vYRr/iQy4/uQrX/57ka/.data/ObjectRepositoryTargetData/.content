@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="9GjgVZ97iEGgN0DVR0HRCQ" Reference="VWvi33cToUm-ppE_xxvoKg/57kakXozN06E4H4NzTXDqA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="app.zoom.us/wc/85333115020/join" DesignTimeRectangle="1182, 544, 500, 50" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='Join' innertext='Join' /&gt;" Guid="cdb30f54-507c-48a6-a335-4677de5d2eed" ScopeSelectorArgument="&lt;html app='msedge.exe' title='*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="c74ee7bae1afd181a6f15991ea78e491.jpg" xmlns="">0H4RmPboK5EWw1E0Lbx-hAw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

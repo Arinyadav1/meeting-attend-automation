@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Join",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "KHJgQS_aREGmJN0u2IsqtA",
+  "Reference": "VWvi33cToUm-ppE_xxvoKg/KHJgQS_aREGmJN0u2IsqtA",
+  "ParentRef": "VWvi33cToUm-ppE_xxvoKg/uQrXd2XJl0q5JUIFWYf5fw",
+  "Created": "2026-09-10T17:06:03.5100571Z",
+  "Updated": "2026-09-10T17:06:03.5100571Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.31.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

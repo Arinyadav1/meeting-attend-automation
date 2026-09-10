@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="kQ_RwnMq7kSe4nwyvI0aWw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="us05web.zoom.us/j/5508051095" DesignTimeRectangle="890, 551, 158, 22" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='Join from browser' tag='SPAN' /&gt;" Guid="8164c1f5-1103-4066-8b31-288f48b2895c" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Join from Zoom Workplace app - Zoom' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="719, 533, 500, 60" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Join from browser' tag='BUTTON' /&gt;" Guid="1dfc6aa7-0404-484f-b874-3d82cdbdd5b2" SearchSteps="Selector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="98c047a538cca2d6dc9f8843a09fb0b9.jpg" xmlns="">0nT0jKeA_vEShGJpOvuQQvA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

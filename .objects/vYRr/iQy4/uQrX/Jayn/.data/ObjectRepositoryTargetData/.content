@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="4oPOdEnH5kSZNSrQvK3bMw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="app.zoom.us/wc/5508051095/join" DesignTimeRectangle="809, 733, 320, 23" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='Continue without microphone and camera' innertext='Continue without microphone and camera' visibleinnertext='Continue without microphone and camera' /&gt;" Guid="75f414b8-86ab-457e-975c-25eec0f9dfea" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Zoom' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="73b73f97d16026ba2fcf4725ee5c6bf5.jpg" xmlns="">0sODa8G033EiQ9V8TYcb7WQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

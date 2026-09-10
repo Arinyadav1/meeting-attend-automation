@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="nbioirehdUafqirqH1xw9Q" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="mu.accsofterp.com/AccSoft_MU/studentLogin.aspx" DesignTimeRectangle="747, 507, 438, 50" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='TABLE' idx='6' /&gt;&lt;webctrl placeholder='Login name' /&gt;" Guid="7a9b3142-043f-4036-9dc3-13a7ee2f9553" ScopeSelectorArgument="&lt;html app='msedge.exe' title='AccSoft 2.0' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="d18bd117fb1dbc137f91469db2c7906a.jpg" xmlns="">03lE-I3ClR02p67J8vqHkww</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

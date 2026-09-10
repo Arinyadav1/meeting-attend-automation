@@ -1,0 +1,6 @@
+{
+  "Name": "AM001_Attend_Meeting",
+  "ProjectType": "Process",
+  "Description": "",
+  "MainFile": "Main.xaml"
+}

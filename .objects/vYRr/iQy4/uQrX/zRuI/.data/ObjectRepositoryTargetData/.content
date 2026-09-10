@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="xe7f-x68l0C2Ly9kRy9UxQ" Reference="VWvi33cToUm-ppE_xxvoKg/zRuIM8nvoEOCc0RC7rnWhg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="mu.accsofterp.com/AccSoft_MU/Parents/OnlineZoomClass.aspx" DesignTimeRectangle="454, 315, 84, 25" ElementType="Text" ElementVisibilityArgument="Interactive" Guid="c3b61769-960d-4515-9fc5-ed8777f23c8d" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Accsoft 2.0 : Parent Desk' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.FullSelectorArgument>
+        <p:InArgument x:TypeArguments="x:String">
+          <p:CSharpValue x:TypeArguments="x:String">"&lt;webctrl aaname='"+CurrentRow["Date &amp; Time"].ToString()+"' /&gt;&lt;nav up='1' /&gt;&lt;webctrl aaname='Join Class' /&gt;"</p:CSharpValue>
+        </p:InArgument>
+      </TargetAnchorable.FullSelectorArgument>
+      <imageRef attrName="InformativeScreenshot" originalValue="ed6407613428f74aa3872efd4c289a22.jpg" xmlns="">0YhFSZAhPXUin4VSOKSmvYQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

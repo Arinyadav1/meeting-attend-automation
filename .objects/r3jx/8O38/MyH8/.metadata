@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Edge Join from Zoom Workplace app - Zoom",
+  "Type": "Screen",
+  "Id": "MyH8lcUavEKvpbul36Nc0A",
+  "Reference": "VWvi33cToUm-ppE_xxvoKg/MyH8lcUavEKvpbul36Nc0A",
+  "ParentRef": "VWvi33cToUm-ppE_xxvoKg/8O38dHNxb0m0wGg3xPnM7Q",
+  "Created": "2026-09-10T17:58:55.6106538Z",
+  "Updated": "2026-09-10T17:58:55.6106538Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.31.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

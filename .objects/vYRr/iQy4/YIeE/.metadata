@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Edge Accsoft 2.0  Parent Desk",
+  "Type": "Screen",
+  "Id": "YIeEwsDfXkGgaXqbRzCW4w",
+  "Reference": "VWvi33cToUm-ppE_xxvoKg/YIeEwsDfXkGgaXqbRzCW4w",
+  "ParentRef": "VWvi33cToUm-ppE_xxvoKg/iQy40DLvQ0qJOBAisgeFPQ",
+  "Created": "2026-09-09T18:23:29.9640193Z",
+  "Updated": "2026-09-09T18:23:29.9640193Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.31.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

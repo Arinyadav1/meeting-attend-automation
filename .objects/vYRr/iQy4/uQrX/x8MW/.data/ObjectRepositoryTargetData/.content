@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="LnQwLIHItEWJH9SnCzW9ZA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="app.zoom.us/wc/5508051095/join" DesignTimeRectangle="672, 594, 593, 40" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='Do you want people to see you in the meeting?' innertext='Do you want people to see you in the meeting?' visibleinnertext='Do you want people to see you in the meeting?' /&gt;" Guid="6c96e954-973d-4081-a20b-92177a3b04e6" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Zoom' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="84f80cea64f32fd50404f8dcbdef3497.jpg" xmlns="">0BHyTQG5gMkOw2vWSlBLEWg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

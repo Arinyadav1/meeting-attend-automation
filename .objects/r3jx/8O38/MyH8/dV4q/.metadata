@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Join from browser",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "dV4q3oQ-PEO5nTen_uugsQ",
+  "Reference": "VWvi33cToUm-ppE_xxvoKg/dV4q3oQ-PEO5nTen_uugsQ",
+  "ParentRef": "VWvi33cToUm-ppE_xxvoKg/MyH8lcUavEKvpbul36Nc0A",
+  "Created": "2026-09-10T17:59:28.260654Z",
+  "Updated": "2026-09-10T17:59:28.260654Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.31.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Edge AccSoft 2.0",
+  "Type": "Screen",
+  "Id": "MP3ZEXwHP0a5ePOAQBgcbA",
+  "Reference": "VWvi33cToUm-ppE_xxvoKg/MP3ZEXwHP0a5ePOAQBgcbA",
+  "ParentRef": "VWvi33cToUm-ppE_xxvoKg/iQy40DLvQ0qJOBAisgeFPQ",
+  "Created": "2026-09-09T15:14:33.7197243Z",
+  "Updated": "2026-09-09T15:14:33.7197243Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.31.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

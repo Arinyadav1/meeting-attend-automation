@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="AHsEWrmW1kqTOHbZ0018Ow" Reference="VWvi33cToUm-ppE_xxvoKg/kvp4oPWUS0yiB7x1IqmFGA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="app.zoom.us/wc/85333115020/join" DesignTimeRectangle="1187, 440, 490, 50" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='Your Name' /&gt;&lt;nav up='1' /&gt;&lt;webctrl aaname='Your Name' idx='2' /&gt;" Guid="f6863c10-7541-4885-88af-fb21e8324ffa" ScopeSelectorArgument="&lt;html app='msedge.exe' title='*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="5cf8def28c78946445e3a09b41ab56e6.jpg" xmlns="">0ZQ4acyD_o0eXeEAvDuv7eQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

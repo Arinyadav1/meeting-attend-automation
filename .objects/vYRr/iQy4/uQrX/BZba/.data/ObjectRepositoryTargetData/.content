@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="-NeUsfIt50ebO6tvf06_iA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="mu.accsofterp.com/AccSoft_MU/Parents/OnlineZoomClass.aspx" CVScreenId="d5c28961-c6e5-47d1-9d55-5289ba9b330e" CvElementArea="1176, 231, 54, 47" CvTextArea="1190, 244, 27, 18" CvTextArgument="OK" CvType="Button" DesignTimeRectangle="1176, 231, 54, 47" ElementType="Button" ElementVisibilityArgument="Interactive" Guid="55d86aa3-0649-451a-a75f-52d2fc61cfb0" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='Accsoft 2.0 : Parent Desk - Personal - Microsoft​ Edge' /&gt;" SearchSteps="CV" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="aaeb81d6900ca5d61f64a9fef494709c.jpg" xmlns="">0NviQVMQzy0-jtyYAkTQzWg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
