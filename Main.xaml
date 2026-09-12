@@ -117,7 +117,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="821.2,6945.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="821.2,7376.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strUserName" />
       <Variable x:TypeArguments="ss:SecureString" Name="sstrPassword" />
@@ -127,7 +127,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process - Edge" sap:VirtualizedContainerService.HintSize="676,174.4" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="msedge.exe">
+    <ui:KillProcess ContinueOnError="{x:Null}" Process="{x:Null}" AppliesTo="All" DisplayName="Kill Process - Edge" sap:VirtualizedContainerService.HintSize="676,174.4" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="msedge.exe">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -135,6 +135,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:KillProcess>
+    <ui:LogMessage DisplayName="Info Log Message - Kill Edge Process" sap:VirtualizedContainerService.HintSize="676,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_22" Level="Info">
+      <ui:LogMessage.Message>
+        <InArgument x:TypeArguments="x:Object">
+          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_45">"Kill Edge Process"</CSharpValue>
+        </InArgument>
+      </ui:LogMessage.Message>
+    </ui:LogMessage>
     <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="AM001 Login Credentials" CacheStrategy="None" DisplayName="Get Credential - Login" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="676,175.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1">
       <ui:GetRobotCredential.Password>
         <OutArgument x:TypeArguments="ss:SecureString">
@@ -153,34 +160,48 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:GetRobotCredential>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge Accsoft 2.0  - Login" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="676,1428" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="31062907-eb6d-4ca7-9899-fd3029e5b0cd" Version="V2">
+    <ui:LogMessage DisplayName="Info Log Message - Get Credentials" sap:VirtualizedContainerService.HintSize="676,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_23" Level="Info">
+      <ui:LogMessage.Message>
+        <InArgument x:TypeArguments="x:Object">
+          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_46">"Get Credentials"</CSharpValue>
+        </InArgument>
+      </ui:LogMessage.Message>
+    </ui:LogMessage>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge Accsoft 2.0  - Login" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="676,2068" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="31062907-eb6d-4ca7-9899-fd3029e5b0cd" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do - Automate application login with retry mechanism" sap:VirtualizedContainerService.HintSize="485.6,1225.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do - Automate application login with retry mechanism" sap:VirtualizedContainerService.HintSize="485.6,1865.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:RetryScope DisplayName="Retry Scope - Automates login to AccSoft ERP with retry mechanism." sap:VirtualizedContainerService.HintSize="452,1000" sap2010:WorkflowViewState.IdRef="RetryScope_1" LogRetriedExceptions="True" NumberOfRetries="3" RetriedExceptionsLogLevel="Warn">
+            <ui:LogMessage DisplayName="Info Log Message - Login Start" sap:VirtualizedContainerService.HintSize="452,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info">
+              <ui:LogMessage.Message>
+                <InArgument x:TypeArguments="x:Object">
+                  <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_25">"Login Start"</CSharpValue>
+                </InArgument>
+              </ui:LogMessage.Message>
+            </ui:LogMessage>
+            <ui:RetryScope DisplayName="Retry Scope - Automates login to AccSoft ERP with retry mechanism." sap:VirtualizedContainerService.HintSize="452,1465.6" sap2010:WorkflowViewState.IdRef="RetryScope_3" LogRetriedExceptions="True" NumberOfRetries="3" RetriedExceptionsLogLevel="Warn">
               <ui:RetryScope.ActivityBody>
                 <ActivityAction>
-                  <Sequence DisplayName="Action - Automates login to the AccSoft ERP application" sap:VirtualizedContainerService.HintSize="450.4,736" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <Sequence DisplayName="Action - Automates login to the AccSoft ERP application" sap:VirtualizedContainerService.HintSize="450.4,1259.2" sap2010:WorkflowViewState.IdRef="Sequence_39">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into - Username" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416.8,245.6" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="SameAsCard" ScopeIdentifier="31062907-eb6d-4ca7-9899-fd3029e5b0cd" Version="V5">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into - Username" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416.8,245.6" sap2010:WorkflowViewState.IdRef="NTypeInto_7" InteractionMode="SameAsCard" ScopeIdentifier="31062907-eb6d-4ca7-9899-fd3029e5b0cd" Version="V5">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable BrowserURL="mu.accsofterp.com/AccSoft_MU/studentLogin.aspx" ContentHash="nbioirehdUafqirqH1xw9Q" DesignTimeRectangle="747, 507, 438, 50" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='TABLE' idx='6' /&gt;&lt;webctrl placeholder='Login name' /&gt;" Guid="7a9b3142-043f-4036-9dc3-13a7ee2f9553" InformativeScreenshot="d18bd117fb1dbc137f91469db2c7906a.jpg" Reference="VWvi33cToUm-ppE_xxvoKg/u6frApzmskuzeh04kJoCTg" ScopeSelectorArgument="&lt;html app='msedge.exe' title='AccSoft 2.0' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
                       </uix:NTypeInto.Target>
                       <uix:NTypeInto.Text>
                         <InArgument x:TypeArguments="x:String">
-                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">strUserName</CSharpValue>
+                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_27">strUserName</CSharpValue>
                         </InArgument>
                       </uix:NTypeInto.Text>
                       <sap:WorkflowViewStateService.ViewState>
@@ -190,10 +211,17 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NTypeInto>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into - Password" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416.8,245.6" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="SameAsCard" ScopeIdentifier="31062907-eb6d-4ca7-9899-fd3029e5b0cd" Version="V5">
+                    <ui:LogMessage DisplayName="Info Log Message - Type Username" sap:VirtualizedContainerService.HintSize="416.8,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_24" Level="Info">
+                      <ui:LogMessage.Message>
+                        <InArgument x:TypeArguments="x:Object">
+                          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_47">"Type Username"</CSharpValue>
+                        </InArgument>
+                      </ui:LogMessage.Message>
+                    </ui:LogMessage>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into - Password" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416.8,245.6" sap2010:WorkflowViewState.IdRef="NTypeInto_8" InteractionMode="SameAsCard" ScopeIdentifier="31062907-eb6d-4ca7-9899-fd3029e5b0cd" Version="V5">
                       <uix:NTypeInto.SecureText>
                         <InArgument x:TypeArguments="ss:SecureString">
-                          <CSharpValue x:TypeArguments="ss:SecureString" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">sstrPassword</CSharpValue>
+                          <CSharpValue x:TypeArguments="ss:SecureString" sap2010:WorkflowViewState.IdRef="CSharpValue`1_28">sstrPassword</CSharpValue>
                         </InArgument>
                       </uix:NTypeInto.SecureText>
                       <uix:NTypeInto.Target>
@@ -206,7 +234,14 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NTypeInto>
-                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - Login" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416.8,184.8" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="31062907-eb6d-4ca7-9899-fd3029e5b0cd" Version="V5">
+                    <ui:LogMessage DisplayName="Info Log Message - Type Password" sap:VirtualizedContainerService.HintSize="416.8,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_25" Level="Info">
+                      <ui:LogMessage.Message>
+                        <InArgument x:TypeArguments="x:Object">
+                          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_49">"Type Password"</CSharpValue>
+                        </InArgument>
+                      </ui:LogMessage.Message>
+                    </ui:LogMessage>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - Login" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416.8,193.6" sap2010:WorkflowViewState.IdRef="NClick_21" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="31062907-eb6d-4ca7-9899-fd3029e5b0cd" Version="V5">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable BrowserURL="mu.accsofterp.com/AccSoft_MU/studentLogin.aspx" ContentHash="ytp1UIX9b0iMoWKvRzg-aQ" DesignTimeRectangle="986, 689, 200, 44" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='Login*' /&gt;" Guid="c26f268e-82db-47cf-8fe8-134d1eee21d3" InformativeScreenshot="6219008bcae36977e4f7c035f221a044.jpg" Reference="VWvi33cToUm-ppE_xxvoKg/eHb5klHLTkCCXmwupZVYkw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='AccSoft 2.0' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
                       </uix:NClick.Target>
@@ -217,27 +252,27 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NClick>
+                    <ui:LogMessage DisplayName="Info Log Message - Click Login Button" sap:VirtualizedContainerService.HintSize="416.8,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_26" Level="Info">
+                      <ui:LogMessage.Message>
+                        <InArgument x:TypeArguments="x:Object">
+                          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_50">"Click Login Button"</CSharpValue>
+                        </InArgument>
+                      </ui:LogMessage.Message>
+                    </ui:LogMessage>
                   </Sequence>
                 </ActivityAction>
               </ui:RetryScope.ActivityBody>
               <ui:RetryScope.Condition>
-                <ActivityFunc x:TypeArguments="x:Boolean">
-                  <ui:UiElementExists Exists="{x:Null}" DisplayName="Element Exists - Check for existence of 'ARIN YADAV' UI element" sap:VirtualizedContainerService.HintSize="426.4,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
-                    <ui:UiElementExists.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="eb433dd9-57c1-43f0-8195-3b6abfda8c4d" InformativeScreenshot="33cda1cd976a46cc1202b02f9cfbe58f" Selector="&lt;webctrl aaname='                                 ARIN YADAV' tag='SPAN' /&gt;">
-                        <ui:Target.TimeoutMS>
-                          <InArgument x:TypeArguments="x:Int32" />
-                        </ui:Target.TimeoutMS>
-                        <ui:Target.WaitForReady>
-                          <InArgument x:TypeArguments="ui:WaitForReady" />
-                        </ui:Target.WaitForReady>
-                      </ui:Target>
-                    </ui:UiElementExists.Target>
-                  </ui:UiElementExists>
-                </ActivityFunc>
+                <ActivityFunc x:TypeArguments="x:Boolean" />
               </ui:RetryScope.Condition>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
             </ui:RetryScope>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="452,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info">
+            <ui:LogMessage DisplayName="Info Log Message - Successfully login" sap:VirtualizedContainerService.HintSize="452,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info">
               <ui:LogMessage.Message>
                 <InArgument x:TypeArguments="x:Object">
                   <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">"Successfully Login"</CSharpValue>
@@ -259,6 +294,11 @@
           </ActivityFunc.Argument>
         </ActivityFunc>
       </uix:NApplicationCard.OCREngine>
+      <uix:NApplicationCard.OpenMode>
+        <InArgument x:TypeArguments="uix:NAppOpenMode">
+          <CSharpValue x:TypeArguments="uix:NAppOpenMode" sap2010:WorkflowViewState.IdRef="CSharpValue`1_26">UiPath.UIAutomationNext.Enums.NAppOpenMode.Always</CSharpValue>
+        </InArgument>
+      </uix:NApplicationCard.OpenMode>
       <uix:NApplicationCard.TargetApp>
         <uix:TargetApp Area="-9, -9, 1938, 1038" BrowserType="Edge" ContentHash="ZS1tjVk0L02ZCJbB_tCkDA" IconBase64="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" InformativeScreenshot="38afa9ce4392e021ce6d360f1b6c97ce.jpg" Reference="VWvi33cToUm-ppE_xxvoKg/YIeEwsDfXkGgaXqbRzCW4w" Selector="&lt;html app='msedge.exe' title='AccSoft 2.0' /&gt;" Url="https://mu.accsofterp.com/AccSoft_MU/studentLogin.aspx" Version="V3">
           <uix:TargetApp.Arguments>
@@ -276,13 +316,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge Accsoft 2.0  - Join Meeting" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="676,5144.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="DebuggerApi" ScopeGuid="9ae2c506-9fc9-400a-a3a0-875a6ef81167" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge Accsoft 2.0  - Join Meeting" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="676,4587.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="DebuggerApi" ScopeGuid="9ae2c506-9fc9-400a-a3a0-875a6ef81167" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do - Meeting Join" sap:VirtualizedContainerService.HintSize="674.4,4951.2" sap2010:WorkflowViewState.IdRef="Sequence_10">
+          <Sequence DisplayName="Do - Meeting Join" sap:VirtualizedContainerService.HintSize="674.4,4393.6" sap2010:WorkflowViewState.IdRef="Sequence_10">
             <Sequence.Variables>
               <Variable x:TypeArguments="sd2:DataTable" Name="dtMeetingDetails" />
             </Sequence.Variables>
@@ -291,10 +331,10 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:RetryScope DisplayName="Retry Scope - Automate joining Zoom meetings from a timetable." sap:VirtualizedContainerService.HintSize="640.8,4891.2" sap2010:WorkflowViewState.IdRef="RetryScope_2" LogRetriedExceptions="True" NumberOfRetries="3" RetriedExceptionsLogLevel="Warn">
+            <ui:RetryScope DisplayName="Retry Scope - Automate joining Zoom meetings from a timetable." sap:VirtualizedContainerService.HintSize="640.8,4333.6" sap2010:WorkflowViewState.IdRef="RetryScope_2" LogRetriedExceptions="True" NumberOfRetries="3" RetriedExceptionsLogLevel="Warn">
               <ui:RetryScope.ActivityBody>
                 <ActivityAction>
-                  <Sequence DisplayName="Action - Automates joining Zoom meetings from a web table." sap:VirtualizedContainerService.HintSize="639.2,4773.6" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                  <Sequence DisplayName="Action - Automates joining Zoom meetings from a web table." sap:VirtualizedContainerService.HintSize="639.2,4136" sap2010:WorkflowViewState.IdRef="Sequence_22">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:Boolean" Name="boolIsNoRecordFound" />
                     </Sequence.Variables>
@@ -328,12 +368,18 @@
                         </ui:Target>
                       </ui:UiElementExists.Target>
                     </ui:UiElementExists>
-                    <If DisplayName="If - No Meeting Record Found" sap:VirtualizedContainerService.HintSize="605.6,4452" sap2010:WorkflowViewState.IdRef="If_3">
+                    <If DisplayName="If - No Meeting Record Found" sap:VirtualizedContainerService.HintSize="605.6,3814.4" sap2010:WorkflowViewState.IdRef="If_4">
                       <If.Condition>
                         <InArgument x:TypeArguments="x:Boolean">
-                          <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_19">boolIsNoRecordFound</CSharpValue>
+                          <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_30">boolIsNoRecordFound</CSharpValue>
                         </InArgument>
                       </If.Condition>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
                       <If.Then>
                         <Sequence DisplayName="Then - Log Message No Record Found" sap:VirtualizedContainerService.HintSize="604,225.6" sap2010:WorkflowViewState.IdRef="Sequence_30">
                           <sap:WorkflowViewStateService.ViewState>
@@ -351,7 +397,7 @@
                         </Sequence>
                       </If.Then>
                       <If.Else>
-                        <Sequence DisplayName="Else - Extract Meeting Details and Join Meeting" sap:VirtualizedContainerService.HintSize="604,4096.8" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                        <Sequence DisplayName="Else - Extract Meeting Details and Join Meeting" sap:VirtualizedContainerService.HintSize="604,3459.2" sap2010:WorkflowViewState.IdRef="Sequence_31">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -370,16 +416,24 @@
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                <x:String x:Key="bbbffa17-1024-47ac-a79a-41b860f664d0">Share</x:String>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </uix:NExtractDataGeneric>
-                          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table - Meeting Details Data Table" sap:VirtualizedContainerService.HintSize="570.4,3894.4" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+                          <ui:LogMessage DisplayName="Info Log Message - Extract Data Table Successfully" sap:VirtualizedContainerService.HintSize="570.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_27" Level="Info">
+                            <ui:LogMessage.Message>
+                              <InArgument x:TypeArguments="x:Object">
+                                <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_51">"Extract Data Table Successfully"</CSharpValue>
+                              </InArgument>
+                            </ui:LogMessage.Message>
+                          </ui:LogMessage>
+                          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table - Meeting Details Data Table" sap:VirtualizedContainerService.HintSize="570.4,3082.4" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
                             <ui:ForEachRow.Body>
                               <ActivityAction x:TypeArguments="sd2:DataRow">
                                 <ActivityAction.Argument>
                                   <DelegateInArgument x:TypeArguments="sd2:DataRow" Name="CurrentRow" />
                                 </ActivityAction.Argument>
-                                <Sequence DisplayName="Body - Automates joining an online meeting, handling prompts and logging status." sap:VirtualizedContainerService.HintSize="568.8,3721.6" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                                <Sequence DisplayName="Body - Automates joining an online meeting, handling prompts and logging status." sap:VirtualizedContainerService.HintSize="568.8,2909.6" sap2010:WorkflowViewState.IdRef="Sequence_29">
                                   <Sequence.Variables>
                                     <Variable x:TypeArguments="x:Boolean" Name="boolIsDialogShow" />
                                   </Sequence.Variables>
@@ -405,6 +459,13 @@
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                   </uix:NClick>
+                                  <ui:LogMessage DisplayName="Info Log Message - Click Class Join Button" sap:VirtualizedContainerService.HintSize="535.2,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_28" Level="Info">
+                                    <ui:LogMessage.Message>
+                                      <InArgument x:TypeArguments="x:Object">
+                                        <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_52">$"Click Class Join Button of Date &amp; Time {CurrentRow["Date &amp; Time"]}"</CSharpValue>
+                                      </InArgument>
+                                    </ui:LogMessage.Message>
+                                  </ui:LogMessage>
                                   <ui:UiElementExists DisplayName="Element Exists - Meeting Not Start or Meeting has finished Dialog" sap:VirtualizedContainerService.HintSize="535.2,139.2" sap2010:WorkflowViewState.IdRef="UiElementExists_4">
                                     <ui:UiElementExists.Exists>
                                       <OutArgument x:TypeArguments="x:Boolean">
@@ -422,25 +483,25 @@
                                       </ui:Target>
                                     </ui:UiElementExists.Target>
                                   </ui:UiElementExists>
-                                  <If DisplayName="If - Meeting Not Start or Meeting has finished" sap:VirtualizedContainerService.HintSize="535.2,3328.8" sap2010:WorkflowViewState.IdRef="If_2">
+                                  <If DisplayName="If - Meeting Not Start or Meeting has finished" sap:VirtualizedContainerService.HintSize="535.2,2342.4" sap2010:WorkflowViewState.IdRef="If_2">
                                     <If.Condition>
                                       <InArgument x:TypeArguments="x:Boolean">
                                         <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_21">boolIsDialogShow</CSharpValue>
                                       </InArgument>
                                     </If.Condition>
                                     <If.Then>
-                                      <Sequence DisplayName="Then - Close Dialog" sap:VirtualizedContainerService.HintSize="518.4,419.2" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                                      <Sequence DisplayName="Then - Close Dialog" sap:VirtualizedContainerService.HintSize="449.6,419.2" sap2010:WorkflowViewState.IdRef="Sequence_23">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - OK" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="484.8,193.6" sap2010:WorkflowViewState.IdRef="NClick_15" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9ae2c506-9fc9-400a-a3a0-875a6ef81167" Version="V5">
+                                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - OK" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,193.6" sap2010:WorkflowViewState.IdRef="NClick_15" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9ae2c506-9fc9-400a-a3a0-875a6ef81167" Version="V5">
                                           <uix:NClick.Target>
                                             <uix:TargetAnchorable BrowserURL="mu.accsofterp.com/AccSoft_MU/Parents/OnlineZoomClass.aspx" CVScreenId="d5c28961-c6e5-47d1-9d55-5289ba9b330e" ContentHash="-NeUsfIt50ebO6tvf06_iA" CvElementArea="1176, 231, 54, 47" CvTextArea="1190, 244, 27, 18" CvTextArgument="OK" CvType="Button" DesignTimeRectangle="1176, 231, 54, 47" ElementType="Button" ElementVisibilityArgument="Interactive" Guid="55d86aa3-0649-451a-a75f-52d2fc61cfb0" InformativeScreenshot="aaeb81d6900ca5d61f64a9fef494709c.jpg" Reference="VWvi33cToUm-ppE_xxvoKg/BZbaWzRZOU-ncArJqxhM0A" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='Accsoft 2.0 : Parent Desk - Personal - Microsoft​ Edge' /&gt;" SearchSteps="CV" Version="V6" WaitForReadyArgument="Interactive" />
                                           </uix:NClick.Target>
                                         </uix:NClick>
-                                        <ui:LogMessage DisplayName="Info Log Message  - Meeting Not Start or Meeting has finished" sap:VirtualizedContainerService.HintSize="484.8,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info">
+                                        <ui:LogMessage DisplayName="Info Log Message  - Meeting Not Start or Meeting has finished" sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info">
                                           <ui:LogMessage.Message>
                                             <InArgument x:TypeArguments="x:Object">
                                               <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_17">$"Meeting Not Start or Meeting has finished for {CurrentRow["Date &amp; Time"]}"</CSharpValue>
@@ -450,13 +511,13 @@
                                       </Sequence>
                                     </If.Then>
                                     <If.Else>
-                                      <Sequence DisplayName="Else - Join Meeting" sap:VirtualizedContainerService.HintSize="518.4,2780" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                                      <Sequence DisplayName="Else - Join Meeting" sap:VirtualizedContainerService.HintSize="449.6,1793.6" sap2010:WorkflowViewState.IdRef="Sequence_28">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <ui:CommentOut sap2010:Annotation.AnnotationText="Comment for testing" DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="484.8,386.4" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+                                        <ui:CommentOut sap2010:Annotation.AnnotationText="Comment for testing" DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="416,88" sap2010:WorkflowViewState.IdRef="CommentOut_4">
                                           <ui:CommentOut.Body>
                                             <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,244.8" sap2010:WorkflowViewState.IdRef="Sequence_32">
                                               <sap:WorkflowViewStateService.ViewState>
@@ -474,10 +535,12 @@
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
                                         </ui:CommentOut>
-                                        <ui:CommentOut sap2010:Annotation.AnnotationText="Comment for testing" DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="484.8,315.2" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+                                        <ui:CommentOut sap2010:Annotation.AnnotationText="Comment for testing" DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="416,88" sap2010:WorkflowViewState.IdRef="CommentOut_5">
                                           <ui:CommentOut.Body>
                                             <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,173.6" sap2010:WorkflowViewState.IdRef="Sequence_33">
                                               <sap:WorkflowViewStateService.ViewState>
@@ -491,10 +554,12 @@
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
                                         </ui:CommentOut>
-                                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - Join from browser" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="484.8,193.6" sap2010:WorkflowViewState.IdRef="NClick_17" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9ae2c506-9fc9-400a-a3a0-875a6ef81167" Version="V5">
+                                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - Join from browser" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,56.8" sap2010:WorkflowViewState.IdRef="NClick_17" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9ae2c506-9fc9-400a-a3a0-875a6ef81167" Version="V5">
                                           <uix:NClick.Target>
                                             <uix:TargetAnchorable BrowserURL="us05web.zoom.us/j/5508051095" ContentHash="kQ_RwnMq7kSe4nwyvI0aWw" DesignTimeRectangle="890, 551, 158, 22" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='Join from browser' tag='SPAN' /&gt;" Guid="8164c1f5-1103-4066-8b31-288f48b2895c" InformativeScreenshot="98c047a538cca2d6dc9f8843a09fb0b9.jpg" Reference="VWvi33cToUm-ppE_xxvoKg/dV4q3oQ-PEO5nTen_uugsQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Join from Zoom Workplace app - Zoom' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
                                               <uix:TargetAnchorable.Anchors>
@@ -504,8 +569,21 @@
                                               </uix:TargetAnchorable.Anchors>
                                             </uix:TargetAnchorable>
                                           </uix:NClick.Target>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
                                         </uix:NClick>
-                                        <uix:NCheckState DisplayName="Check App State - Not Allow Camera" EnableIfNotExists="False" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="484.8,581.6" sap2010:WorkflowViewState.IdRef="NCheckState_6" ScopeIdentifier="9ae2c506-9fc9-400a-a3a0-875a6ef81167" Version="V5">
+                                        <ui:LogMessage DisplayName="Info Log Message - Click Join From Browser Button" sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_15" Level="Info">
+                                          <ui:LogMessage.Message>
+                                            <InArgument x:TypeArguments="x:Object">
+                                              <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_38">"Click Join From Browser Button"</CSharpValue>
+                                            </InArgument>
+                                          </ui:LogMessage.Message>
+                                        </ui:LogMessage>
+                                        <uix:NCheckState DisplayName="Check App State - Not Allow Camera" EnableIfNotExists="False" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="416,56.8" sap2010:WorkflowViewState.IdRef="NCheckState_6" ScopeIdentifier="9ae2c506-9fc9-400a-a3a0-875a6ef81167" Version="V5">
                                           <uix:NCheckState.IfExists>
                                             <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,244.8" sap2010:WorkflowViewState.IdRef="Sequence_24">
                                               <sap:WorkflowViewStateService.ViewState>
@@ -535,11 +613,18 @@
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
                                         </uix:NCheckState>
-                                        <uix:NCheckState DisplayName="Check App State - Not Allow Mic" EnableIfNotExists="False" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="484.8,581.6" sap2010:WorkflowViewState.IdRef="NCheckState_7" ScopeIdentifier="9ae2c506-9fc9-400a-a3a0-875a6ef81167" Version="V5">
+                                        <ui:LogMessage DisplayName="Info Log Message - Click Not Allow Camera" sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_17" Level="Info">
+                                          <ui:LogMessage.Message>
+                                            <InArgument x:TypeArguments="x:Object">
+                                              <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_39">"Click Not Allow Camera"</CSharpValue>
+                                            </InArgument>
+                                          </ui:LogMessage.Message>
+                                        </ui:LogMessage>
+                                        <uix:NCheckState DisplayName="Check App State - Not Allow Mic" EnableIfNotExists="False" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="416,56.8" sap2010:WorkflowViewState.IdRef="NCheckState_7" ScopeIdentifier="9ae2c506-9fc9-400a-a3a0-875a6ef81167" Version="V5">
                                           <uix:NCheckState.IfExists>
                                             <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,244.8" sap2010:WorkflowViewState.IdRef="Sequence_26">
                                               <sap:WorkflowViewStateService.ViewState>
@@ -570,28 +655,75 @@
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
                                         </uix:NCheckState>
-                                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into - Meeting Attendee Name" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="484.8,245.6" sap2010:WorkflowViewState.IdRef="NTypeInto_6" InteractionMode="SameAsCard" ScopeIdentifier="9ae2c506-9fc9-400a-a3a0-875a6ef81167" Text="Arin Yadav" Version="V5">
+                                        <ui:LogMessage DisplayName="Info Log Message - Click Not Alow Mic" sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_18" Level="Info">
+                                          <ui:LogMessage.Message>
+                                            <InArgument x:TypeArguments="x:Object">
+                                              <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_41">"Click Not Allow Mic"</CSharpValue>
+                                            </InArgument>
+                                          </ui:LogMessage.Message>
+                                        </ui:LogMessage>
+                                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into - Meeting Attendee Name" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,56.8" sap2010:WorkflowViewState.IdRef="NTypeInto_6" InteractionMode="SameAsCard" ScopeIdentifier="9ae2c506-9fc9-400a-a3a0-875a6ef81167" Text="Arin Yadav" Version="V5">
                                           <uix:NTypeInto.Target>
                                             <uix:TargetAnchorable BrowserURL="app.zoom.us/wc/85333115020/join" ContentHash="AHsEWrmW1kqTOHbZ0018Ow" DesignTimeRectangle="1187, 440, 490, 50" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='Your Name' /&gt;&lt;nav up='1' /&gt;&lt;webctrl aaname='Your Name' idx='2' /&gt;" Guid="f6863c10-7541-4885-88af-fb21e8324ffa" InformativeScreenshot="5cf8def28c78946445e3a09b41ab56e6.jpg" Reference="VWvi33cToUm-ppE_xxvoKg/kvp4oPWUS0yiB7x1IqmFGA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
                                           </uix:NTypeInto.Target>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
                                         </uix:NTypeInto>
-                                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - Join" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="484.8,193.6" sap2010:WorkflowViewState.IdRef="NClick_20" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9ae2c506-9fc9-400a-a3a0-875a6ef81167" Version="V5">
+                                        <ui:LogMessage DisplayName="Info Log Message - Type Meeting Attendee Name" sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_19" Level="Info">
+                                          <ui:LogMessage.Message>
+                                            <InArgument x:TypeArguments="x:Object">
+                                              <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_42">"Type Meeting Attendee Name"</CSharpValue>
+                                            </InArgument>
+                                          </ui:LogMessage.Message>
+                                        </ui:LogMessage>
+                                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - Join" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,56.8" sap2010:WorkflowViewState.IdRef="NClick_20" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9ae2c506-9fc9-400a-a3a0-875a6ef81167" Version="V5">
                                           <uix:NClick.Target>
                                             <uix:TargetAnchorable BrowserURL="app.zoom.us/wc/85333115020/join" ContentHash="9GjgVZ97iEGgN0DVR0HRCQ" DesignTimeRectangle="1182, 544, 500, 50" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='Join' innertext='Join' /&gt;" Guid="cdb30f54-507c-48a6-a335-4677de5d2eed" InformativeScreenshot="c74ee7bae1afd181a6f15991ea78e491.jpg" Reference="VWvi33cToUm-ppE_xxvoKg/57kakXozN06E4H4NzTXDqA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
                                           </uix:NClick.Target>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
                                         </uix:NClick>
-                                        <ui:LogMessage DisplayName="Info Log Message - Meeting Start" sap:VirtualizedContainerService.HintSize="484.8,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info">
+                                        <ui:LogMessage DisplayName="Info Log Message - Click Join Meeting Button" sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_20" Level="Info">
+                                          <ui:LogMessage.Message>
+                                            <InArgument x:TypeArguments="x:Object">
+                                              <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_43">"Click Join Meeting Button"</CSharpValue>
+                                            </InArgument>
+                                          </ui:LogMessage.Message>
+                                        </ui:LogMessage>
+                                        <ui:LogMessage DisplayName="Info Log Message - Meeting Start" sap:VirtualizedContainerService.HintSize="416,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info">
                                           <ui:LogMessage.Message>
                                             <InArgument x:TypeArguments="x:Object">
                                               <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_18">$"{CurrentRow["Date &amp; Time"]} meeting start for subject {CurrentRow["Subject"]}"</CSharpValue>
                                             </InArgument>
                                           </ui:LogMessage.Message>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
                                         </ui:LogMessage>
-                                        <ui:Break DisplayName="Break - Loop After Join Meeting" sap:VirtualizedContainerService.HintSize="484.8,48" sap2010:WorkflowViewState.IdRef="Break_1" />
+                                        <ui:LogMessage DisplayName="Info Log Message - Delay Start" sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_21" Level="Info">
+                                          <ui:LogMessage.Message>
+                                            <InArgument x:TypeArguments="x:Object">
+                                              <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_44">"5 Minutes Delay Start"</CSharpValue>
+                                            </InArgument>
+                                          </ui:LogMessage.Message>
+                                        </ui:LogMessage>
+                                        <Delay Duration="00:05:00" sap:VirtualizedContainerService.HintSize="416,122.4" sap2010:WorkflowViewState.IdRef="Delay_2" />
+                                        <ui:Break DisplayName="Break - Loop After Join Meeting" sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="Break_1" />
                                       </Sequence>
                                     </If.Else>
                                   </If>
@@ -635,6 +767,11 @@
           </ActivityFunc.Argument>
         </ActivityFunc>
       </uix:NApplicationCard.OCREngine>
+      <uix:NApplicationCard.OpenMode>
+        <InArgument x:TypeArguments="uix:NAppOpenMode">
+          <CSharpValue x:TypeArguments="uix:NAppOpenMode" sap2010:WorkflowViewState.IdRef="CSharpValue`1_32">UiPath.UIAutomationNext.Enums.NAppOpenMode.Never</CSharpValue>
+        </InArgument>
+      </uix:NApplicationCard.OpenMode>
       <uix:NApplicationCard.TargetApp>
         <uix:TargetApp Area="-9, -9, 1938, 1038" BrowserType="Edge" ContentHash="YoJ8ETleVEuRAOF1pY8Xlg" IconBase64="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" InformativeScreenshot="1dcbc22890cca3496294b0300b812dad.jpg" Reference="VWvi33cToUm-ppE_xxvoKg/uQrXd2XJl0q5JUIFWYf5fw" Selector="&lt;html app='msedge.exe' title='Accsoft 2.0 : Parent Desk' /&gt;" Url="https://mu.accsofterp.com/AccSoft_MU/Parents/ParentDesk1.aspx" Version="V3">
           <uix:TargetApp.Arguments>
@@ -645,6 +782,12 @@
           </uix:TargetApp.WorkingDirectory>
         </uix:TargetApp>
       </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
   </Sequence>
 </Activity>
